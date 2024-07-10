@@ -5,9 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import ch.zli.m223.model.AppUser;
 import ch.zli.m223.repository.RoleRepository;
-import ch.zli.m223.repository.TodoRepository;
 import ch.zli.m223.roles.UserRoles;
 import ch.zli.m223.service.user.UserService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +16,6 @@ public class ServerInitialisation implements ApplicationRunner {
 
     private final UserService userService;
     private final RoleRepository roleRepository;
-    private final TodoRepository todoRepository;
 
     @Value("${test.data.create.user:false}")
     private boolean createTestDataForUser;
